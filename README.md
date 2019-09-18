@@ -1,4 +1,6 @@
 # cookieCutter
 cookieCutter language repository
 
-I'm just gonna go find the google docs file I made as documentation a while back hold on
+# Functional equivelants
+
+rawr and shout are the same as print
