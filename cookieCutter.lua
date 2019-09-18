@@ -1,3 +1,8 @@
+local module = {
+	_version = 0.1,
+	deprecatedFuncs = false -- change to true to allow use of deprecated functions
+}
+
 print("Initializing cookieCutter.lua...")
 --[[
 custom functions
@@ -28,18 +33,35 @@ cookie.swap = function(deck1, item1, item2)
     deck1[item1], deck1[item2] = deck1[item2], deck1[item1] --they were called decks initially, leave me alone ;^;
 end
 
-cookie.new = function(...)
-	local variableNumberOfItems = ...
-	local restOfTable = ...
-	table.remove(restOfTable[1])
-	return {[0]= variableNumberOfItems[1], restOfTable}
+
+
+
+--[[
+	this allows the use of deprecated funtions, for all you legacy lovers -.-
+	THEY WERE DEPRACTED FOR A REASON OMG GO AWAY
+]]
+local function allowDeprecated
+	
+	
+	
+	
+	
+	cookie.new = function(...)
+		local variableNumberOfItems = ...
+		local restOfTable = ...
+		table.remove(restOfTable[1])
+		return {[0]= variableNumberOfItems[1], restOfTable}
+	end
+	
+	
+	
+	
 end
+if module.deprecatedFuncs == true then pcall(allowDeprecated) end
 
-rawr("done!")
 
-os.execute("cls")
 
---loadstring(...)
+--loadstring(...) -- TODO: MAKE INTERPRETABLE CONSOLE
 
 
 --[[

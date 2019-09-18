@@ -1,0 +1,9 @@
+0.2 --[[
+	deprecated cookie.new
+	made functions able to deprecate
+	added changelog.txt
+]]
+
+0.1 --[[
+	initial commit
+]]
