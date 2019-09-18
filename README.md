@@ -5,4 +5,4 @@ also sorry about the versions and language being all stuffed up I'm just really 
 
 # Functional equivelants
 
-rawr and shout are the same as print
+rawr and are the same as print
