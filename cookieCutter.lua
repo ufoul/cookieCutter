@@ -1,9 +1,11 @@
 local module = {
-	_version = 0.1,
+	_version = 0.3,
 	deprecatedFuncs = false -- change to true to allow use of deprecated functions
 }
 
-print("Initializing cookieCutter.lua...")
+--print("Initializing cookieCutter.lua...")
+
+
 --[[
 custom functions
 --
@@ -40,7 +42,7 @@ end
 	this allows the use of deprecated funtions, for all you legacy lovers -.-
 	THEY WERE DEPRACTED FOR A REASON OMG GO AWAY
 ]]
-local function allowDeprecated
+local function allowDeprecated()
 	
 	
 	
