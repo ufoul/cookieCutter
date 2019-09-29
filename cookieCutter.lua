@@ -1,5 +1,5 @@
 local module = {
-	_version = 0.3,
+	_version = 0.0.3,
 	deprecatedFuncs = false -- change to true to allow use of deprecated functions
 }
 
