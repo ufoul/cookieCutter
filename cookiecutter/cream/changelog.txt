@@ -1,0 +1,13 @@
+0.2.1 --[[
+	did some stuff to allow use of deprecated funcitons a bit more
+]]
+
+0.2 --[[
+	deprecated cookie.new
+	made functions able to deprecate
+	added changelog.txt
+]]
+
+0.1 --[[
+	initial commit
+]]
