@@ -3,6 +3,7 @@ local module = {
 	tokens = {}, -- the current tokens in the program, used when in compiled mode
 }
 
+local errorMessage = require "modules/errorMessages"
 getmetatable("").__index = function(str,i) return string.sub(str,i,i) end
 
 function table.find(f, l) -- find element in table, taken proudly from stackoverflow, might need later
@@ -29,13 +30,13 @@ end
 
 
 module.validTokens = {
-	"rawr"
-	,
-	"(" , ")"
-	,
-	"{" , "}"
-	,
-	
+	"r",
+	"(" , ")",
+	"{" , "}",
+	"@",
+	"?",
+	"\t",
+	"\n"
 }
 
 function module.advance()
@@ -49,9 +50,13 @@ module.lex = function(stringToLex, tokenTable)
 	for i=1,#string1 do
 		local possibleTokens = {}
 		local currentToken = ""
+		currentToken = string1[i]
 		if table.contains(tokenTable,string1[i]) then
-			print(string1[i])
-			table.insert(module.tokens,string1[i])
+			io.write(currentToken)
+			table.insert(module.tokens,currentToken)
+		else
+			errorMessage.invToken(currentToken)
+			return
 		end
 	end
 	
