@@ -4,6 +4,7 @@ local module = {
 }
 
 local errorMessage = require "modules/errorMessages"
+local alphabet = require "modules/functionChars"
 getmetatable("").__index = function(str,i) return string.sub(str,i,i) end
 
 function table.find(f, l) -- find element in table, taken proudly from stackoverflow, might need later
@@ -30,14 +31,21 @@ end
 
 
 module.validTokens = {
-	"r",
+--[[	"r",
 	"(" , ")",
 	"{" , "}",
 	"@",
 	"?",
 	"\t",
-	"\n"
+	"\n",
+	";",
+	" ",
+	"_",]]
 }
+
+for _,v in pairs(alphabet.alphabet) do
+	table.insert(module.validTokens, v)
+end
 
 function module.advance()
 	module.currentChar = module.currentChar + 1

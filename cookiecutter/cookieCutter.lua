@@ -3,8 +3,8 @@ require "modules/testing"
 errorMessage = require "modules/errorMessages"
 
 local code = [[
-?@{
-	a
+?{
+	d
 }
 ]] --will later chnage so this is the raw code input
 
