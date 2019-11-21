@@ -1,7 +1,0 @@
-_________IGNORE_THIS_FILE_____
-
-if starts with number type is
-number else if text then is
-variable or function if brackets
-then is function else is variable
-or statement

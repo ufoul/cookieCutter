@@ -1,2 +1,0 @@
-
-os.execute("cls")
